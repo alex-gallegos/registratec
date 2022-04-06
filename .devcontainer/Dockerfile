@@ -1,0 +1,2 @@
+FROM node:16.14.2
+ENV PORT 8000
