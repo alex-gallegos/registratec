@@ -1,5 +1,6 @@
 {
 	"name": "registratec-dev",
 	"image": "node:16.14.2",
+	"runArgs": ["--network=registratec-network"],
 	"forwardPorts": [8000]
 }
