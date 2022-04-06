@@ -1,7 +1,5 @@
 {
 	"name": "registratec-dev",
-	"build": {
-		"dockerfile": "Dockerfile"
-	},
+	"image": "node:16.14.2",
 	"forwardPorts": [8000]
 }
