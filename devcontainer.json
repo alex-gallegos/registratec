@@ -1,5 +1,5 @@
 {
 	"name": "registratec-dev",
-	"image": "https://hub.docker.com/_/ubuntu:focal",
+	"build": { "dockerfile": "DevEnvDockerfile" },
 	"forwardPorts": [8000]
 }
