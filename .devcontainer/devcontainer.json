@@ -2,5 +2,6 @@
 	"name": "registratec-dev",
 	"image": "node:16.14.2",
 	"runArgs": ["--network=registratec-network"],
+	"postCreateCommand": "npm install",
 	"forwardPorts": [8000]
 }
