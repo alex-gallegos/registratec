@@ -1,8 +1,6 @@
 {
 	"name": "registratec-dev",
-	"build": {
-		"dockerfile": "Dockerfile",
-		"context": ".."
-	},
+	"image": "https://hub.docker.com/_/node:16.14.2",
+	"postCreateCommand": "npm install",
 	"forwardPorts": [8000]
 }
