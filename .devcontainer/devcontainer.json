@@ -2,6 +2,6 @@
 	"name": "registratec-dev",
 	"image": "https://hub.docker.com/_/node:16.14.2",
 	"runArgs": ["--network=registratec-network"],
-	"postCreateCommand": "npm install"
+	"postCreateCommand": "npm install",
 	"forwardPorts": [8000]
 }
