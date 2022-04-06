@@ -1,5 +1,5 @@
 {
 	"name": "registratec-dev",
-	"build": { "dockerfile": "DevEnvDockerfile" },
+	"build": { "dockerfile": "Dockerfile" },
 	"forwardPorts": [8000]
 }
