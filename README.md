@@ -40,7 +40,7 @@ router.post('/miendpoint_b' (request, response) => {
     // Lógica de mi otro endpoint
 });
 
-module.export = router;
+module.exports = router;
 ```
 
 **app.js**
