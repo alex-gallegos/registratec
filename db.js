@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://registratec-db:27017/registratec');
 
-exports.User = mongoose.model(
+module.exports.User = mongoose.model(
     'User',
     {
         username: String,
@@ -13,7 +13,7 @@ exports.User = mongoose.model(
     }
 );
 
-exports.Appointment = mongoose.model(
+module.exports.Appointment = mongoose.model(
     'Appointment',
     {
         creator: mongoose.ObjectId,
@@ -23,7 +23,7 @@ exports.Appointment = mongoose.model(
     }
 );
 
-exports.InadmissibleDate = mongoose.model(
+module.exports.InadmissibleDate = mongoose.model(
     'InadmissibleDate',
     {
         admin: mongoose.ObjectId,
@@ -31,7 +31,7 @@ exports.InadmissibleDate = mongoose.model(
     }
 );
 
-exports.InadmissibleTime = mongoose.model(
+module.exports.InadmissibleTime = mongoose.model(
     'InadmissibleTime',
     {
         admin: mongoose.ObjectId,

@@ -14,6 +14,7 @@ app.get('/', (request, response) => {
 });
 
 app.use('/login', require('./login'));
+app.use('/signup', require('./signup'));
 
 app.listen(port, () => {
     console.log(`App listening on port ${port}!`);
