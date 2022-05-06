@@ -23,8 +23,13 @@ router.get('/', (request, response) => {
         day.setDate(required_monday.getDate() + x);
         return day;
     });
-    console.log(days);
-    response.redirect('/');
+    //console.log(days);
+    //response.redirect('/');
+    response.render('calendar', {
+        layout: false,
+        hours: hours,
+        days: days
+    });
 });
 
 module.exports = router;

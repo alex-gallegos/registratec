@@ -1,0 +1,17 @@
+<div id="calendar" class="container-fluid">
+    <div class="row row-cols-2 row-cols-lg-6">
+        <div class="col-lg-auto d-none d-lg-block">
+            {{> hoursDisplay }}
+        </div>
+        {{#each days}}
+        <div class="col-auto d-block d-lg-none">
+            {{> hoursDisplay }}
+        </div>
+        <div class="col">
+            {{#each hours}}
+            <div class="rounded-3 bg-secondary"><p>...</p></div>
+            {{/each}}
+        </div>
+        {{/each}}
+    </div>
+</div>

@@ -1,12 +1,17 @@
 const path = require('path');
 
 const cookie_parser = require('cookie-parser');
+const hbs = require('express-handlebars');
 const express = require('express');
 
 const jwt = require('./jwt');
 
 const app = express();
 const port = process.env.PORT || 8000;
+
+app.engine('handlebars', hbs.engine());
+app.set('view engine', 'handlebars');
+app.set('views', path.join(__dirname, '/templates'));
 
 app.use(cookie_parser());
 app.use(express.json());
