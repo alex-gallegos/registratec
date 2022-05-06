@@ -10,9 +10,14 @@ const db = require('./db');
 
 router.get('/', (request, response) => {
     const token = request.cookies.access_token || null;
-    if (token && jwt.verify_token(token)) response.redirect('/');
-    else response.sendFile(path.join(__dirname, '/html/login.html'));
-    return;
+    if (token && jwt.verify_token(token)) {
+        console.log('Found valid token! (from login page)');
+        response.redirect('/');
+    }
+    else {
+        console.log('No valid token (from login page)');
+        response.sendFile(path.join(__dirname, '/html/login.html'));
+    }
 });
 
 router.post('/', async (request, response) => {

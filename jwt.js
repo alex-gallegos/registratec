@@ -19,8 +19,14 @@ function verify_token(token) {
 
 function check_login_middleware(request, response, next) {
     const token = request.cookies.access_token || null;
-    if (token && verify_token(token)) next();
-    else response.redirect('/login');
+    if (token && verify_token(token)) {
+        console.log('Found valid token! (from middleware)');
+        next();
+    }
+    else{
+        console.log('No valid token (from middleware)');
+        response.redirect('/login');
+    }
 }
 
 module.exports.generate_token = generate_token;
