@@ -1,6 +1,7 @@
 const path = require('path');
 
 const bcrypt = require('bcrypt');
+const jwt = require('./jwt');
 const router = require('express').Router();
 
 const db = require('./db');
