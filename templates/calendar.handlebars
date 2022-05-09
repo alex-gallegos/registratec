@@ -1,17 +1,17 @@
-<div id="calendar" class="container-fluid">
-    <div class="row row-cols-2 row-cols-lg-6">
-        <div class="col-lg-auto d-none d-lg-block">
-            {{> hoursDisplay }}
-        </div>
-        {{#each days}}
-        <div class="col-auto d-block d-lg-none">
-            {{> hoursDisplay }}
-        </div>
-        <div class="col">
-            {{#each hours}}
-            <div class="rounded-3 bg-secondary"><p>...</p></div>
-            {{/each}}
-        </div>
-        {{/each}}
-    </div>
+<div class="text-right" style="grid-column: 1; grid-row: 1"><p></p></div>
+{{#each hours as |hour|}}
+<div class="text-right d-none d-xl-block" style="grid-column: 1; grid-row: {{hour.rowIndex}}"><p>{{hour.readable}}</p></div>
+{{/each}}
+{{#each days as |day|}}
+<div class="sticky-top bg-white" style="grid-column: {{day.colIndex}}; grid-row: 1">
+    <h4 class="pt-3">{{day.readable}}</h4>
+    <hr>
 </div>
+{{#each ../hours as |hour|}}
+<div class="d-grid" style="grid-column: {{day.colIndex}}; grid-row: {{hour.rowIndex}}">
+        <button type="button" class="btn btn-outline-secondary">
+            <span class="d-inline d-xl-none">{{hour.readable}}</span>
+        </button>
+</div>
+{{/each}}
+{{/each}}
