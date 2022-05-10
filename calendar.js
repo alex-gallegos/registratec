@@ -13,7 +13,8 @@ const readable_hours = hours.map((value) => ((value + 11) % 12 + 1) + ':00 ' + (
 router.use('/calendar', jwt.check_login_middleware);
 
 router.get('/', (request, response) => {
-    const week_offset = parseInt(request.query.adv) * 7 || 0;
+    const query_advance = parseInt(request.query.adv) || 0;
+    const week_offset = query_advance * 7;
     const today = new Date(new Date().toDateString());
     const this_monday = new Date(today);
     this_monday.setDate((today.getDate() - today.getDay()) + 1);
@@ -29,6 +30,9 @@ router.get('/', (request, response) => {
     console.log(days);
     //response.redirect('/');
     response.render('calendar', {
+        allowPrevPage: query_advance > 0,
+        prevPage: query_advance - 1,
+        nextPage: query_advance + 1,
         layout: false,
         hours: hours.map((value, index) => {
             return {

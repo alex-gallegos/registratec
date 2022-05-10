@@ -1,4 +1,19 @@
-<div class="text-right" style="grid-column: 1; grid-row: 1"><p></p></div>
+<div class="text-right d-grid py-3 pe-0 pe-lg-2" style="grid-column: 1; grid-row: 1">
+    <div class="btn-group" role="group">
+        {{#if allowPrevPage}}
+        <button type="button" class="btn btn-outline-secondary" onclick="load_into('/calendar?adv={{prevPage}}', 'calendar');">
+            <i class="fa-solid fa-angle-left"></i>
+        </button>
+        {{else}}
+        <button type="button" class="btn btn-outline-secondary" disabled="disabled">
+            <i class="fa-solid fa-angle-left"></i>
+        </button>
+        {{/if}}
+        <button type="button" class="btn btn-outline-secondary" onclick="load_into('/calendar?adv={{nextPage}}', 'calendar');">
+            <i class="fa-solid fa-angle-right"></i>
+        </button>
+    </div>
+</div>
 {{#each hours as |hour|}}
 <div class="text-right d-none d-xl-block" style="grid-column: 1; grid-row: {{hour.rowIndex}}"><p>{{hour.readable}}</p></div>
 {{/each}}
