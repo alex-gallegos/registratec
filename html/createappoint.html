@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-xl navbar-dark" style="background-color: #0A5400;">
+        <div class="container-fluid">
+            <a href="/" class="navbar-brand">REGISTRATEC</a>
+        </div>
+    </nav>
+    <div class="container-xl">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <img src="/img/logo.png" alt="Logo Registratec" class="img-fluid mx-auto d-block">
+            </div>
+            <div class="col-md-6">
+                <h3>Registro</h3>
+                <hr>
+                <form action="" method="post" target="_self">
+                    <div class="mb-3 row">
+                        <div class="col-8">
+                            <label for="crear-fecha" class="form-label">Fecha:</label>
+                            <input type="date" id="start" name="trip-start" value="2018-07-22" min="2018-01-01" max="2018-12-31">
+                          <!--  <input type="date" name="fecha" id="crear-fecha" class="form-control"> No tocar-->
+                        </div>
+                        <div class="col">
+                            <label for="crear-username" class="form-label">Nombre de Usuario:</label>
+                            <input type="text" name="username" id="crear-username" class="form-control">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="crear-firstname" class="form-label">Nombres:</label>
+                        <input type="text" name="firstname" id="crear-firstname" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="crear-lastname" class="form-label">Apellidos:</label>
+                        <input type="text" name="lastname" id="crear-lastname" class="form-control">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -28,6 +28,7 @@ router.post('/', async (request, response) => {
         const token = jwt.generate_token(username);
         response.cookie('access_token', token, { httpOnly: true });
         response.redirect('/');
+       // response.redirect('/html/crearcita.html'); Redirige a crear cita
     }
     else {
         response.sendFile(path.join(__dirname, '/html/login.html'));
